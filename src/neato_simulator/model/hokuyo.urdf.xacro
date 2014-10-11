@@ -44,11 +44,7 @@
 	  </scan>
 	  <range>
 	    <min>0.05</min>
-<<<<<<< HEAD
-	    <max>6.0</max>
-=======
 	    <max>5.6</max>
->>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
 	    <resolution>.36</resolution>
 	  </range>
 	  <noise>
@@ -58,19 +54,11 @@
 	</noise>
 	</ray>
 	<always_on>1</always_on>
-<<<<<<< HEAD
-	<update_rate>5</update_rate>
-	<plugin name="LIDAR_en_ros" filename="libgazebo_ros_laser.so">
-	  <topicName>/base_scan</topicName>
-	  <frameName>base_laser_link</frameName>
-	  <updateRate>5.0</updateRate>
-=======
 	<update_rate>10</update_rate>
 	<plugin name="LIDAR_en_ros" filename="libgazebo_ros_laser.so">
 	  <topicName>/scan</topicName>
 	  <frameName>laser_joint</frameName>
 	  <updateRate>10.0</updateRate>
->>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
         </plugin>
    </sensor>
   </gazebo>

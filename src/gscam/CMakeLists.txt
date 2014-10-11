@@ -99,15 +99,7 @@ else()
     )
 
   install(FILES
-<<<<<<< HEAD
     examples/raspi_nodelet.launch
-=======
-    examples/v4l.launch
-    examples/gscam_nodelet.launch
-    examples/nodelet_pipeline.launch
->>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
-    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-    )
 
   # Interim compatibility
   # Remove this in the next release
