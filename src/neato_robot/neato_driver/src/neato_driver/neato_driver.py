@@ -146,15 +146,25 @@ class xv11():
         # turn things on
         time.sleep(2)
         #print self.port.recv(16384)
+<<<<<<< HEAD
         time.sleep(2)
+=======
+        time.sleep(5)
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
         self.setTestMode("on")
         time.sleep(2)
         self.setLDS("on")
 
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
     def exit(self):
         self.setLDS("off")
         self.setTestMode("off")
 
+<<<<<<< HEAD
     def send_command(self,cmd):
         print cmd.data
         if cmd.data == 'shutdown':
@@ -163,6 +173,8 @@ class xv11():
         else:
             self.port.send(cmd.data + "\r\n")
 
+=======
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
     def setTestMode(self, value):
         """ Turn test mode on/off. """
 
@@ -183,13 +195,17 @@ class xv11():
         #return (ranges,intensities)
         if len(ranges) == 0:
             return (ranges,intensities)
+<<<<<<< HEAD
         # filter out lone detections
+=======
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
         for i in range(len(ranges)):
             previous = (i-1)%len(ranges)
             next = (i+1)%len(ranges)
             if (ranges[previous] == 0 and ranges[next] == 0) or intensities[i] < 10:
                 ranges[i] = 0.0
                 intensities[i] = 0.0
+<<<<<<< HEAD
         # filter out ranges that are too long or too short
         for i in range(len(ranges)):
             if ranges[i] > 5.0:
@@ -200,6 +216,8 @@ class xv11():
             if ranges[i] < .2 or ranges[i] > 5.0:
                 ranges[i] = 0.0
                 intensities[i] = 0.0
+=======
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
         return (ranges,intensities)
 
     def getScanRanges(self):
@@ -210,6 +228,10 @@ class xv11():
         try:
             remainder = ""
             found_start_token = False
+<<<<<<< HEAD
+=======
+            print "looking for starting token"
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
             while not(found_start_token):
                 line = self.port.recv(1024)
                 if line.find('Unknown Cmd') != -1:
@@ -228,6 +250,10 @@ class xv11():
                         listing = listing[i+1:]
                         found_start_token = True
                         break
+<<<<<<< HEAD
+=======
+            print "found starting token"
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
             if len(listing) and not(line.endswith('\n')):
                 remainder = listing[-1]
                 listing = listing[0:-1]

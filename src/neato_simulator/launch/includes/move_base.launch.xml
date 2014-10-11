@@ -15,6 +15,10 @@
     <rosparam file="$(find turtlebot_navigation)/param/base_local_planner_params.yaml" command="load" />
     <rosparam file="$(find turtlebot_navigation)/param/move_base_params.yaml" command="load" />
 
+<<<<<<< HEAD
+=======
+    <remap from="cmd_vel" to="navigation_velocity_smoother/raw_cmd_vel"/>
+>>>>>>> 1fcf04fd660ea6d819d783bfc0f4a6018b0fafb7
     <remap from="odom" to="$(arg odom_topic)"/>
   </node>
 </launch>
